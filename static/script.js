@@ -1,5 +1,9 @@
 // script.js
 
+// Set the background image dynamically
+document.body.style.background = "url('" + "{{ url_for('static', filename='background.jpg') }}" + "') no-repeat center center fixed";
+document.body.style.backgroundSize = "cover";
+
 // Three.js script for a cool 3D geometrical shape
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
