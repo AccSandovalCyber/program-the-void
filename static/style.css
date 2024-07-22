@@ -20,3 +20,8 @@ body {
     text-align: center;
     margin-top: 20px;
 }
+
+.lead a {
+    font-size: 1.5rem; /* Increase font size */
+    padding: 10px 20px; /* Add padding for easier clicking */
+}
