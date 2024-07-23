@@ -20,21 +20,21 @@ body {
 
 h1 {
     font-size: 3rem;
-    color: #00c1ff; /* Retro TV Blue */
-    text-shadow: 0 0 10px #00c1ff, 0 0 20px #00c1ff, 0 0 30px #00c1ff;
+    color: #ff004d; /* Retro Red */
+    text-shadow: 0 0 10px #ff004d, 0 0 20px #ff004d, 0 0 30px #ff004d, 0 0 40px #ff004d;
 }
 
 .lead a {
     font-size: 1.5rem; /* Increase font size */
     padding: 10px 20px; /* Add padding for easier clicking */
-    color: #00c1ff; /* Retro TV Blue */
+    color: #00c1ff; /* Retro Blue */
     background-color: transparent;
     border: 2px solid #00c1ff;
     border-radius: 25px;
     text-decoration: none;
     position: relative;
     transition: color 0.3s, background-color 0.3s;
-    animation: glitch 1.5s infinite alternate;
+    animation: glitch 4s infinite alternate;
 }
 
 .lead a:hover {
@@ -50,15 +50,18 @@ h1 {
         box-shadow: 0 0 10px #00c1ff, 0 0 20px #00c1ff, 0 0 30px #00c1ff, 0 0 40px #00c1ff;
     }
     40% {
-        box-shadow: 0 0 5px #00c1ff, 0 0 10px #00c1ff, 0 0 15px #00c1ff, 0 0 20px #00c1ff;
+        box-shadow: 0 0 5px #ff004d, 0 0 10px #ff004d, 0 0 15px #ff004d, 0 0 20px #ff004d;
     }
     60% {
-        box-shadow: 0 0 10px #00c1ff, 0 0 20px #00c1ff, 0 0 30px #00c1ff, 0 0 40px #00c1ff;
+        box-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 0px #000, 0 0 0px #000;
+        color: #000; /* Turn off */
     }
     80% {
         box-shadow: 0 0 5px #00c1ff, 0 0 10px #00c1ff, 0 0 15px #00c1ff, 0 0 20px #00c1ff;
+        color: #00c1ff; /* Turn on */
     }
     100% {
-        box-shadow: 0 0 15px #00c1ff, 0 0 30px #00c1ff, 0 0 45px #00c1ff, 0 0 60px #00c1ff;
+        box-shadow: 0 0 10px #ff004d, 0 0 20px #ff004d, 0 0 30px #ff004d, 0 0 40px #ff004d;
+        color: #ff004d; /* Turn on red */
     }
 }
