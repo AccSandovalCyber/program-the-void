@@ -20,16 +20,16 @@ body {
 
 h1 {
     font-size: 3rem;
-    color: #ff6f6f; /* Faded Red */
-    text-shadow: 0 0 10px #ff6f6f, 0 0 20px #ff6f6f, 0 0 30px #ff6f6f, 0 0 40px #ff6f6f;
+    color: #ff4d4d; /* Darker, vibrant red */
+    text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d, 0 0 40px #ff4d4d;
 }
 
 .lead a {
     font-size: 1.5rem; /* Slightly smaller font size */
     padding: 8px 16px; /* Reduced padding */
     color: #ffffff; /* White text color */
-    background-color: #ff6f6f; /* Faded Red background */
-    border: 2px solid #ff6f6f;
+    background-color: #ff4d4d; /* Darker, vibrant red */
+    border: 2px solid #ff4d4d;
     border-radius: 20px; /* Slightly smaller border radius */
     text-decoration: none;
     position: relative;
@@ -39,29 +39,27 @@ h1 {
 }
 
 .lead a::before {
-    content: "Program The Void";
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    color: #ffffff; /* White text color */
-    background-color: transparent;
-    border: 2px solid #ffffff;
+    border: 2px solid #ff4d4d;
     border-radius: 20px; /* Matches button border radius */
-    opacity: 1; /* Always visible */
+    opacity: 0; /* Ensure no duplicate text */
 }
 
 .lead a:hover {
     background-color: #ffffff;
-    color: #ff6f6f; /* Faded Red text */
+    color: #ff4d4d; /* Darker, vibrant red text */
 }
 
 @keyframes glow {
     0% {
-        box-shadow: 0 0 5px #ff6f6f, 0 0 10px #ff6f6f, 0 0 15px #ff6f6f, 0 0 20px #ff6f6f;
+        box-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff4d4d, 0 0 15px #ff4d4d, 0 0 20px #ff4d4d;
     }
     100% {
-        box-shadow: 0 0 5px #ff6f6f, 0 0 10px #ff6f6f, 0 0 15px #ff6f6f, 0 0 20px #ff6f6f;
+        box-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff4d4d, 0 0 15px #ff4d4d, 0 0 20px #ff4d4d;
     }
 }
