@@ -1,6 +1,6 @@
 /* style.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font for body text */
     margin: 0;
     padding: 0;
     display: flex;
@@ -20,22 +20,22 @@ body {
 
 h1 {
     font-size: 3rem;
-    color: #ff004d; /* Retro Red */
-    text-shadow: 0 0 10px #ff004d, 0 0 20px #ff004d, 0 0 30px #ff004d, 0 0 40px #ff004d;
+    color: #ff6f6f; /* Faded Red */
+    text-shadow: 0 0 10px #ff6f6f, 0 0 20px #ff6f6f, 0 0 30px #ff6f6f, 0 0 40px #ff6f6f;
 }
 
 .lead a {
-    font-size: 1.5rem; /* Increase font size */
-    padding: 10px 20px; /* Add padding for easier clicking */
-    color: #00c1ff; /* Retro Blue */
-    background-color: transparent;
-    border: 2px solid #00c1ff;
-    border-radius: 25px;
+    font-size: 1.5rem; /* Slightly smaller font size */
+    padding: 8px 16px; /* Reduced padding */
+    color: #ffffff; /* White text color */
+    background-color: #ff6f6f; /* Faded Red background */
+    border: 2px solid #ff6f6f;
+    border-radius: 20px; /* Slightly smaller border radius */
     text-decoration: none;
     position: relative;
     transition: color 0.3s, background-color 0.3s;
-    font-family: 'Press Start 2P', cursive; /* Retro font */
-    animation: glow 1.5s infinite alternate, glitch 5s infinite alternate;
+    font-family: 'Megabeat', cursive; /* Futuristic font for button */
+    animation: glow 1.5s infinite alternate;
 }
 
 .lead a::before {
@@ -45,41 +45,23 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    color: #00c1ff; /* Retro Blue */
+    color: #ffffff; /* White text color */
     background-color: transparent;
-    border: 2px solid #00c1ff;
-    border-radius: 25px;
-    opacity: 1; /* Make sure text is always visible */
+    border: 2px solid #ffffff;
+    border-radius: 20px; /* Matches button border radius */
+    opacity: 1; /* Always visible */
 }
 
 .lead a:hover {
-    background-color: #00c1ff;
-    color: #000000;
-}
-
-@keyframes glitch {
-    0%, 100% {
-        box-shadow: 0 0 5px #00c1ff, 0 0 10px #00c1ff, 0 0 15px #00c1ff, 0 0 20px #00c1ff;
-    }
-    20% {
-        box-shadow: 0 0 10px #00c1ff, 0 0 20px #00c1ff, 0 0 30px #00c1ff, 0 0 40px #00c1ff;
-    }
-    40% {
-        box-shadow: 0 0 5px #ff004d, 0 0 10px #ff004d, 0 0 15px #ff004d, 0 0 20px #ff004d;
-    }
-    60% {
-        box-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 0px #000, 0 0 0px #000;
-    }
-    80% {
-        box-shadow: 0 0 5px #00c1ff, 0 0 10px #00c1ff, 0 0 15px #00c1ff, 0 0 20px #00c1ff;
-    }
+    background-color: #ffffff;
+    color: #ff6f6f; /* Faded Red text */
 }
 
 @keyframes glow {
     0% {
-        text-shadow: 0 0 5px #00c1ff, 0 0 10px #00c1ff, 0 0 15px #00c1ff, 0 0 20px #00c1ff;
+        box-shadow: 0 0 5px #ff6f6f, 0 0 10px #ff6f6f, 0 0 15px #ff6f6f, 0 0 20px #ff6f6f;
     }
     100% {
-        text-shadow: 0 0 5px #00c1ff, 0 0 10px #00c1ff, 0 0 15px #00c1ff, 0 0 20px #00c1ff;
+        box-shadow: 0 0 5px #ff6f6f, 0 0 10px #ff6f6f, 0 0 15px #ff6f6f, 0 0 20px #ff6f6f;
     }
 }
