@@ -18,7 +18,38 @@ body {
     margin-top: 20px;
 }
 
+h1 {
+    font-size: 3rem;
+    color: #0ff; /* Tron Legacy Blue */
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
 .lead a {
     font-size: 1.5rem; /* Increase font size */
     padding: 10px 20px; /* Add padding for easier clicking */
+    color: #0ff; /* Tron Legacy Blue */
+    background-color: transparent;
+    border: 2px solid #0ff;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.lead a:hover {
+    background-color: #0ff;
+    color: #000000;
+}
+
+.btn-primary {
+    color: #0ff;
+    background-color: transparent;
+    border-color: #0ff;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+.btn-primary:hover {
+    color: #000;
+    background-color: #0ff;
+    border-color: #0ff;
+    box-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
 }
