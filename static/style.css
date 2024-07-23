@@ -35,7 +35,7 @@ h1 {
     position: relative;
     overflow: hidden; /* Ensures the glow effect stays within the button */
     font-family: 'Orbitron', sans-serif; /* Futuristic font for button */
-    animation: flicker 3s infinite; /* Flickering effect */
+    animation: flicker 5s infinite; /* Slower flickering effect */
 }
 
 .lead a::before {
@@ -79,16 +79,16 @@ h1 {
 
 @keyframes flicker {
     0% { opacity: 1; }
-    10% { opacity: 0.8; }
-    20% { opacity: 1; }
-    30% { opacity: 0.7; }
-    40% { opacity: 1; }
-    50% { opacity: 0.6; }
-    60% { opacity: 1; }
-    70% { opacity: 0.8; }
-    80% { opacity: 1; }
-    90% { opacity: 0.5; }
-    100% { opacity: 1; }
+    10% { opacity: 0.9; }
+    20% { opacity: 0.8; }
+    30% { opacity: 1; }
+    40% { opacity: 0.7; }
+    50% { opacity: 1; }
+    60% { opacity: 0.6; }
+    70% { opacity: 1; }
+    80% { opacity: 0.5; }
+    90% { opacity: 1; }
+    100% { opacity: 0.4; }
 }
 
 @media (max-width: 600px) {
