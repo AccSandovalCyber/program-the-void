@@ -1,39 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program The Void</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-size: cover;
-            color: #ffffff;
-        }
-    </style>
-</head>
-<body style="background: url('{{ url_for('static', filename='background.jpg') }}') no-repeat center center fixed;">
-    <div class="container mt-5 text-center">
-        <div id="3d-container"></div>
-        <h1 class="display-4 mt-5">As Above So Below</h1>
-        <p class="lead">
-            <a href="https://www.youtube.com/@ProgramTheVoid" target="_blank" class="btn btn-primary">Program The Void</a>
-        </p>
-    </div>
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover;
+    color: #ffffff;
+    background: url('{{ url_for('static', filename='background.jpg') }}') no-repeat center center fixed;
+    background-size: cover;
+}
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
-</html>
+#3d-container {
+    width: 300px;  /* Reduced width */
+    height: 300px; /* Reduced height */
+    background: transparent; /* Fully transparent background */
+    margin: 20px 0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lead a {
+    font-size: 1.5rem; /* Increase font size */
+    padding: 10px 20px; /* Add padding for easier clicking */
+}
