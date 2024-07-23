@@ -34,7 +34,23 @@ h1 {
     text-decoration: none;
     position: relative;
     transition: color 0.3s, background-color 0.3s;
-    animation: glitch 4s infinite alternate;
+    animation: glitch 5s infinite alternate;
+}
+
+.lead a::before {
+    content: "Program The Void";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ff004d; /* Retro Red */
+    background-color: transparent;
+    border: 2px solid #ff004d;
+    border-radius: 25px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    animation: glitch-text 5s infinite alternate;
 }
 
 .lead a:hover {
@@ -43,25 +59,32 @@ h1 {
 }
 
 @keyframes glitch {
-    0% {
+    0%, 100% {
         box-shadow: 0 0 5px #00c1ff, 0 0 10px #00c1ff, 0 0 15px #00c1ff, 0 0 20px #00c1ff;
+        color: #00c1ff;
     }
     20% {
         box-shadow: 0 0 10px #00c1ff, 0 0 20px #00c1ff, 0 0 30px #00c1ff, 0 0 40px #00c1ff;
     }
     40% {
         box-shadow: 0 0 5px #ff004d, 0 0 10px #ff004d, 0 0 15px #ff004d, 0 0 20px #ff004d;
+        color: #ff004d;
     }
     60% {
         box-shadow: 0 0 0px #000, 0 0 0px #000, 0 0 0px #000, 0 0 0px #000;
-        color: #000; /* Turn off */
+        color: #00c1ff;
     }
     80% {
         box-shadow: 0 0 5px #00c1ff, 0 0 10px #00c1ff, 0 0 15px #00c1ff, 0 0 20px #00c1ff;
-        color: #00c1ff; /* Turn on */
+        color: #00c1ff;
     }
-    100% {
-        box-shadow: 0 0 10px #ff004d, 0 0 20px #ff004d, 0 0 30px #ff004d, 0 0 40px #ff004d;
-        color: #ff004d; /* Turn on red */
+}
+
+@keyframes glitch-text {
+    0%, 100% {
+        opacity: 0;
+    }
+    40%, 60% {
+        opacity: 1;
     }
 }
