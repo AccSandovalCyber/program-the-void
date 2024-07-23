@@ -8,10 +8,9 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background: url('https://i.pinimg.com/564x/8f/38/5b/8f385bccd275be145604729f6779581e.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
-    background: url('{{ url_for('static', filename='background.jpg') }}') no-repeat center center fixed;
-    background-size: cover;
 }
 
 #3d-container {
