@@ -13,13 +13,6 @@ body {
     color: #ffffff;
 }
 
-#3d-container {
-    width: 300px;  /* Reduced width */
-    height: 300px; /* Reduced height */
-    background: transparent; /* Fully transparent background */
-    margin: 20px 0;
-}
-
 .container {
     text-align: center;
     margin-top: 20px;
