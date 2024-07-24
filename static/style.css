@@ -16,6 +16,7 @@ body {
 .container {
     text-align: center;
     margin-top: 20px;
+    max-width: 90%; /* Adjust for mobile responsiveness */
 }
 
 .tv-stack {
@@ -23,8 +24,9 @@ body {
 }
 
 .tv {
-    width: 200px;
-    height: 150px;
+    width: 200px; /* Set a maximum width */
+    max-width: 90%; /* Make sure it scales down on smaller screens */
+    height: auto; /* Let the height adjust based on the content */
     background: transparent;
     margin: 10px 0;
     position: absolute;
@@ -64,11 +66,11 @@ body {
 /* Responsive Design */
 @media (max-width: 600px) {
     .tv {
-        width: 150px;
-        height: 100px;
+        width: 150px; /* Adjust size for mobile */
+        height: auto; /* Let height auto-adjust */
     }
 
     .tv-middle .youtube-link span {
-        font-size: 1rem;
+        font-size: 1rem; /* Adjust text size for mobile */
     }
 }
