@@ -91,6 +91,40 @@ h1 {
     100% { opacity: 0.4; }
 }
 
+/* Basic TV styles */
+.tv {
+    width: 200px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    background-size: cover;
+    display: inline-block; /* Makes them inline for a better layout */
+    margin: 10px; /* Add spacing between TVs */
+}
+
+/* Static effect */
+.static {
+    background: url('static/static.gif') center center/cover no-repeat; /* Add your static gif path */
+}
+
+/* Off state */
+.off {
+    background: black;
+}
+
+/* On state */
+.on {
+    background: url('static/on-image.jpg') center center/cover no-repeat; /* Add your on image path */
+}
+
+/* Animation effect */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.flicker {
+    animation: flicker 0.5s infinite;
+}
+
 @media (max-width: 600px) {
     .lead a {
         font-size: 1.2rem; /* Adjust font size for mobile */
@@ -99,5 +133,10 @@ h1 {
 
     h1 {
         font-size: 2.5rem; /* Adjust header size for mobile */
+    }
+
+    .tv {
+        width: 150px; /* Adjust size for mobile */
+        height: 100px; /* Adjust size for mobile */
     }
 }
