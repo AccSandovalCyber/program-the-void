@@ -5,37 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program The Void</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="path/to/your/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Megabeat&display=swap">
 </head>
 <body>
     <div class="container mt-5 text-center">
         <div class="tv-stack">
-            <div class="tv tv-top">
-                <iframe src="https://giphy.com/embed/Ph0oIVQeuvh0k" width="200" height="150" style="border: none;" frameborder="0" allowfullscreen></iframe>
+            <div class="tv tv-1">
+                <iframe class="lazy" data-src="https://giphy.com/embed/Ph0oIVQeuvh0k" width="200" height="150" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="tv tv-middle">
-                <a href="https://www.youtube.com/@ProgramTheVoid" target="_blank" class="youtube-link">
-                    <iframe src="https://giphy.com/embed/DmRk0aSsl9Tl6" width="200" height="150" style="border: none;" frameborder="0" allowfullscreen></iframe>
-                    <span>Click Me</span>
+            <div class="tv tv-2">
+                <iframe class="lazy" data-src="https://giphy.com/embed/DmRk0aSsl9Tl6" width="200" height="150" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="tv tv-3">
+                <a href="https://www.youtube.com/@ProgramTheVoid" target="_blank">
+                    <iframe class="lazy" data-src="https://giphy.com/embed/3og0IFWed7zXmfGw9O" width="200" height="150" frameborder="0" allowfullscreen></iframe>
+                    <span class="click-me">Click Me</span>
                 </a>
-            </div>
-            <div class="tv tv-bottom">
-                <iframe src="https://giphy.com/embed/3og0IFWed7zXmfGw9O" width="480" height="355" style="border: none;" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-</body>
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="path/to/your/script.js"></script>
 </body>
 </html>
+
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>

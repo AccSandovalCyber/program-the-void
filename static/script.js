@@ -1,36 +1,20 @@
-// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyIframes = [].slice.call(document.querySelectorAll("iframe.lazy"));
 
-// Three.js script for a cool 3D geometrical shape
-var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-var renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('3d-container').appendChild(renderer.domElement);
+    if ("IntersectionObserver" in window) {
+        let lazyIframeObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyIframe = entry.target;
+                    lazyIframe.src = lazyIframe.dataset.src;
+                    lazyIframe.classList.remove("lazy");
+                    lazyIframeObserver.unobserve(lazyIframe);
+                }
+            });
+        });
 
-// Create an icosahedron geometry
-var geometry = new THREE.IcosahedronGeometry(2, 0);
-var material = new THREE.MeshBasicMaterial({ color: 0x156289, wireframe: true });
-var icosahedron = new THREE.Mesh(geometry, material);
-scene.add(icosahedron);
-
-camera.position.z = 5;
-
-var animate = function () {
-    requestAnimationFrame(animate);
-
-    icosahedron.rotation.x += 0.01;
-    icosahedron.rotation.y += 0.01;
-
-    renderer.render(scene, camera);
-};
-
-animate();
-
-// Adjust 3D canvas size on window resize
-window.addEventListener('resize', function () {
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    renderer.setSize(width, height);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
+        lazyIframes.forEach(function(lazyIframe) {
+            lazyIframeObserver.observe(lazyIframe);
+        });
+    }
 });
