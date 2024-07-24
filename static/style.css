@@ -1,4 +1,4 @@
-/* style.css */
+
 body {
     font-family: 'Orbitron', sans-serif; /* Futuristic font for body text */
     margin: 0;
@@ -8,10 +8,11 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: url('https://www.pinterest.com/pin/342555115380245602/') no-repeat center center fixed;
+    background: url('https://i.pinimg.com/564x/8f/38/5b/8f385bccd275be145604729f6779581e.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
 }
+
 
 .container {
     text-align: center;
