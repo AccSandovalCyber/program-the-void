@@ -1,5 +1,5 @@
 body {
-    font-family: 'Orbitron', sans-serif; /* Futuristic font for body text */
+    font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,7 +10,7 @@ body {
     background: url('https://i.pinimg.com/564x/8f/38/5b/8f385bccd275be145604729f6779581e.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
-    position: relative; /* Needed for absolute positioning of TV elements */
+    position: relative;
 }
 
 .container {
@@ -19,49 +19,56 @@ body {
 }
 
 .tv-stack {
-    position: absolute; /* Allows precise positioning over the background image */
+    position: absolute;
 }
 
 .tv {
-    width: 200px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
-    background: transparent; /* To make sure the background doesn't interfere with the background image */
-    position: absolute; /* To allow precise positioning and transformation */
-    transform-origin: center; /* Change origin if needed for rotation */
+    width: 200px;
+    height: 150px;
+    background: transparent;
+    margin: 10px 0;
+    position: absolute;
+    transform-origin: center;
 }
 
 .tv iframe {
     width: 100%;
     height: 100%;
-    border: none; /* Ensure the iframe fits perfectly within the TV frame */
+    border: none;
 }
 
-.tv-top {
-    top: 100px; /* Adjust according to the TV's position in the background */
-    left: 150px; /* Adjust according to the TV's position in the background */
-    transform: rotate(-10deg) scale(1.2); /* Adjust rotation and scale to match TV's angle and size */
+.tv-top iframe,
+.tv-bottom iframe {
+    pointer-events: none; /* Disables clicking on these iframes */
 }
 
-.tv-middle {
-    top: 300px;
-    left: 200px;
-    transform: rotate(-5deg) scale(1.1);
+.tv-middle .youtube-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
 }
 
-.tv-bottom {
-    top: 500px;
-    left: 250px;
-    transform: rotate(0deg) scale(1);
+.tv-middle .youtube-link span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 1.2rem;
+    z-index: 10;
+    pointer-events: none; /* Ensures the span text doesn't interfere with clicking */
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     .tv {
-        width: 150px; /* Adjust size for mobile */
-        height: 100px; /* Adjust size for mobile */
+        width: 150px;
+        height: 100px;
     }
 
-    .tv-middle .btn span {
-        font-size: 1rem; /* Adjust text size for mobile */
+    .tv-middle .youtube-link span {
+        font-size: 1rem;
     }
 }
