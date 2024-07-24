@@ -12,47 +12,26 @@
 </head>
 <body>
     <div class="container mt-5 text-center">
-        <h1 class="display-4 mt-5">Hello User</h1>
-        <p class="lead">
-            <a href="https://www.youtube.com/@ProgramTheVoid" target="_blank" class="btn btn-primary">Program The Void</a>
-        </p>
-
-        <!-- Add the TV elements here -->
-        <div class="tv" id="tv1"></div>
-        <div class="tv" id="tv2"></div>
-        <div class="tv" id="tv3"></div>
-        <!-- Add more TVs as needed -->
+        <div class="tv-stack">
+            <div class="tv tv-top">
+                <iframe src="https://giphy.com/embed/Ph0oIVQeuvh0k" width="200" height="150" style="border: none;" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="tv tv-middle">
+                <a href="https://www.youtube.com/@ProgramTheVoid" target="_blank" class="btn btn-primary">
+                    <iframe src="https://giphy.com/embed/Ph0oIVQeuvh0k" width="200" height="150" style="border: none;" frameborder="0" allowfullscreen></iframe>
+                    <span>Click Me</span>
+                </a>
+            </div>
+            <div class="tv tv-bottom">
+                <iframe src="https://giphy.com/embed/Ph0oIVQeuvh0k" width="200" height="150" style="border: none;" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <!-- Include your JavaScript for the TV animation -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const tvs = document.querySelectorAll(".tv");
-
-            function changeState(tv) {
-                const states = ["static", "off", "on"];
-                const randomState = states[Math.floor(Math.random() * states.length)];
-                tv.className = `tv ${randomState}`;
-
-                if (randomState === "static") {
-                    tv.classList.add("flicker");
-                }
-            }
-
-            function randomizeTVs() {
-                tvs.forEach(tv => {
-                    changeState(tv);
-                });
-                setTimeout(randomizeTVs, 2000); // Change state every 2 seconds
-            }
-
-            randomizeTVs();
-        });
-    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
 
