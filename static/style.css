@@ -46,11 +46,11 @@ body, html {
 
 .gif-container {
     position: absolute;
-    bottom: 145px; /* Adjust to align with the bottom of the TV */
-    left: 47%;
+    bottom: 15vh; /* Adjust based on TV's vertical position */
+    left: 50%;
     transform: translateX(-50%);
-    width: 60px; /* Size of the GIF */
-    height: 60px; /* Size of the GIF */
+    width: 20vw; /* Scale the GIF size with viewport width */
+    height: auto; /* Maintain aspect ratio */
     z-index: 1;
     pointer-events: none; /* Prevent clicking */
 }
