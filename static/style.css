@@ -27,20 +27,6 @@ body, html {
     animation: dyingBatteries 3s infinite;
 }
 
-.door-button {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: 'Orbitron', sans-serif;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    margin-top: 10px;
-}
-
 @keyframes dyingBatteries {
     0%, 100% {
         background-color: rgba(255, 0, 0, 0.8);
@@ -64,22 +50,11 @@ body, html {
     }
 }
 
-.tv-button:hover, .door-button:hover {
+.tv-button:hover {
     background-color: rgba(255, 0, 0, 1);
     box-shadow: 0 0 20px rgba(255, 0, 0, 1);
 }
 
-.tv-button:focus, .door-button:focus {
+.tv-button:focus {
     outline: none;
-}
-
-.modal-content.bg-dark {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 0;
-}
-
-.modal-header .close span {
-    color: #fff;
 }
