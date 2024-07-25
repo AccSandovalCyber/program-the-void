@@ -4,60 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program The Void</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="background-overlay">
-        <div class="container">
-            <header>
-                <h1>Welcome to Program The Void</h1>
-            </header>
-            <main>
-                <div class="tv tv1">
-                    <img src="path_to_your_gif1.gif" alt="TV 1 GIF">
-                </div>
-                <div class="tv tv2">
-                    <a href="https://www.youtube.com/@ProgramTheVoid" target="_blank">
-                        <img src="https://media.giphy.com/media/4vGqobN49fU81m9lSu/giphy.gif" alt="YouTube Channel">
-                    </a>
-                </div>
-                <div class="tv tv3">
-                    <img src="path_to_your_gif2.gif" alt="TV 3 GIF">
-                </div>
-            </main>
-            <footer>
-                <p>&copy; 2024 Program The Void</p>
-            </footer>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program The Void</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Megabeat&display=swap">
-
 </head>
 <body>
-    <div class="container mt-5 text-center">
-        <h1 class="display-4 mt-5">Hello User</h1>
-        <p class="lead">
-            <a href="https://www.youtube.com/@ProgramTheVoid" target="_blank" class="btn btn-primary">Program The Void</a>
-        </p>
+    <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <h1 class="display-4">Hello User</h1>
+            <p class="lead">Welcome to the Void</p>
+            <div class="tv-container">
+                <img src="{{ url_for('static', filename='tv.png') }}" alt="TV" class="tv-image">
+                <a href="https://www.youtube.com/@ProgramTheVoid" target="_blank" class="tv-button">Program The Void</a>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
-</html> -->
+</html>
