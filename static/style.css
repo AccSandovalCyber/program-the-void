@@ -1,77 +1,81 @@
-body {
-    font-family: 'Orbitron', sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    background: url('https://i.pinimg.com/originals/88/3d/5f/883d5ffd0257c25ca4dee2e5142a8f6e.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.tv-container {
     position: relative;
+    width: 80%;
+    max-width: 1200px;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
-.container {
-    position: relative;
-    text-align: center;
-}
-
-.tv-stack {
-    position: relative;
+.tv-background {
+    position: absolute;
     width: 100%;
-    height: 100vh; /* Ensure the tv-stack takes the full height */
+    height: 100%;
+    background: url('https://darsha.org/wp-content/uploads/2017/11/DarshaHewitt_ElectrostaticBellChoir_01.jpg') no-repeat center center / cover;
+    filter: blur(10px);
+    z-index: 1;
 }
 
 .tv {
-    position: absolute;
-    width: 20vw; /* Adjust width based on view width */
-    height: auto;
+    position: relative;
+    z-index: 2;
+    margin: 10px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
 }
 
-.tv-1 {
-    top: 20%; /* Adjust as needed */
-    left: 15%; /* Adjust as needed */
-}
-
-.tv-2 {
-    top: 40%; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.tv-3 {
-    top: 60%; /* Adjust as needed */
-    left: 30%; /* Adjust as needed */
-}
-
-.tv-4 {
-    top: 80%; /* Adjust as needed */
-    left: 70%; /* Adjust as needed */
-}
-
-.tv iframe {
+.tv img {
     width: 100%;
-    height: 100%;
-    border: none;
+    height: auto;
+    display: block;
 }
 
-.tv a .click-me {
+.tv-main {
+    width: 40%;
+    cursor: pointer;
+}
+
+.tv-main:hover {
+    transform: scale(1.05);
+}
+
+.tv-ambient {
+    width: 20%;
+}
+
+.click-me {
     position: absolute;
-    bottom: 10px;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
     font-size: 1.2rem;
-    z-index: 10;
-    pointer-events: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .tv {
-        width: 30vw; /* Adjust size for mobile */
-    }
-
-    .tv a .click-me {
-        font-size: 1rem;
-    }
+.click-me:hover {
+    background-color: rgba(0, 0, 0, 0.9);
 }
