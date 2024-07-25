@@ -28,24 +28,24 @@ body {
 }
 
 .tv-1 {
-    top: 10%;
-    left: 10%;
+    top: 20%; /* Adjust as needed */
+    left: 15%; /* Adjust as needed */
 }
 
 .tv-2 {
-    top: 30%;
+    top: 40%; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
 }
 
 .tv-3 {
-    top: 50%;
-    left: 30%;
+    top: 60%; /* Adjust as needed */
+    left: 30%; /* Adjust as needed */
 }
 
 .tv-4 {
-    top: 70%;
-    left: 70%;
+    top: 80%; /* Adjust as needed */
+    left: 70%; /* Adjust as needed */
 }
 
 .tv iframe {
