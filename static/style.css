@@ -3,13 +3,12 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: url('https://i.pinimg.com/originals/88/3d/5f/883d5ffd0257c25ca4dee2e5142a8f6e.jpg') no-repeat center center fixed;
+    background: url('/static/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     position: relative;
     overflow: hidden;
 }
-
 
 .container {
     position: relative;
@@ -24,7 +23,7 @@ body {
 
 .tv {
     position: absolute;
-    width: 10vw; /* Adjust width based on view width */
+    width: 20vw; /* Adjust width based on view width */
     height: auto;
 }
 
@@ -40,22 +39,19 @@ body {
 }
 
 .tv-3 {
-    top: 60%;
-    left: 80%;
+    top: 50%;
+    left: 30%;
+}
+
+.tv-4 {
+    top: 70%;
+    left: 70%;
 }
 
 .tv iframe {
     width: 100%;
     height: 100%;
     border: none;
-}
-
-.tv a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    text-decoration: none;
 }
 
 .tv a .click-me {
@@ -72,7 +68,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .tv {
-        width: 20vw; /* Adjust size for mobile */
+        width: 30vw; /* Adjust size for mobile */
     }
 
     .tv a .click-me {
