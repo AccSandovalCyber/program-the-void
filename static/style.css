@@ -28,6 +28,7 @@ body, html {
     background: url('https://giphy.com/embed/FgJ6FbfJGwztK') center center no-repeat;
     background-size: 0; /* Initially hide the GIF */
     transition: background-size 0.3s;
+}
 
 @keyframes dyingBatteries {
     0%, 100% {
