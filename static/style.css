@@ -45,13 +45,13 @@ body, html {
 }
 
 .gif-container {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
-    z-index: 10; /* Ensure it appears above other elements */
+    position: absolute; /* Or fixed if you want it to stay on scroll */
+    bottom: 50px; /* Adjust as needed */
+    left: 50px; /* Adjust as needed */
+    width: 100px; /* Size of the GIF */
+    height: 100px; /* Size of the GIF */
+    z-index: 1; /* Ensure it appears correctly */
+    pointer-events: none; /* Prevent clicking */
 }
 
 .giphy-embed {
