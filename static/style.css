@@ -72,3 +72,14 @@ body, html {
 .tv-button:focus, .door-button:focus {
     outline: none;
 }
+
+.modal-content.bg-dark {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+}
+
+.modal-header .close span {
+    color: #fff;
+}
