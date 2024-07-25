@@ -25,7 +25,9 @@ body, html {
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
     animation: dyingBatteries 3s infinite;
-}
+    background: url('https://giphy.com/embed/FgJ6FbfJGwztK') center center no-repeat;
+    background-size: 0; /* Initially hide the GIF */
+    transition: background-size 0.3s;
 
 @keyframes dyingBatteries {
     0%, 100% {
@@ -51,10 +53,24 @@ body, html {
 }
 
 .tv-button:hover {
-    background-color: rgba(255, 0, 0, 1);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+    background-size: 100%; /* Show GIF on hover */
+    color: transparent; /* Hide text on hover */
 }
 
-.tv-button:focus {
+.tv-button:focus, .door-button:focus {
     outline: none;
+}
+
+.door-button {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin-top: 10px;
 }
