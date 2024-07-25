@@ -2,34 +2,45 @@ body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
-    background: url('https://i.pinimg.com/originals/88/3d/5f/883d5ffd0257c25ca4dee2e5142a8f6e.jpg') no-repeat center center fixed;
+    background: url('/static/background.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: #ffffff;
     position: relative;
+    overflow: hidden;
 }
 
 .container {
+    position: relative;
     text-align: center;
-    margin-top: 20px;
-    max-width: 90%; /* Adjust for mobile responsiveness */
 }
 
 .tv-stack {
-    position: absolute;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ensure the tv-stack takes the full height */
 }
 
 .tv {
-    width: 200px; /* Set a maximum width */
-    max-width: 90%; /* Make sure it scales down on smaller screens */
-    height: auto; /* Let the height adjust based on the content */
-    background: transparent;
-    margin: 10px 0;
     position: absolute;
-    transform-origin: center;
+    width: 10vw; /* Adjust width based on view width */
+    height: auto;
+}
+
+.tv-1 {
+    top: 10%;
+    left: 10%;
+}
+
+.tv-2 {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tv-3 {
+    top: 60%;
+    left: 80%;
 }
 
 .tv iframe {
@@ -38,12 +49,7 @@ body {
     border: none;
 }
 
-.tv-top iframe,
-.tv-bottom iframe {
-    pointer-events: none; /* Disables clicking on these iframes */
-}
-
-.tv-middle .youtube-link {
+.tv a {
     display: block;
     width: 100%;
     height: 100%;
@@ -51,7 +57,7 @@ body {
     text-decoration: none;
 }
 
-.tv-middle .youtube-link span {
+.tv a .click-me {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -59,17 +65,16 @@ body {
     color: #ffffff;
     font-size: 1.2rem;
     z-index: 10;
-    pointer-events: none; /* Ensures the span text doesn't interfere with clicking */
+    pointer-events: none;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .tv {
-        width: 150px; /* Adjust size for mobile */
-        height: auto; /* Let height auto-adjust */
+        width: 20vw; /* Adjust size for mobile */
     }
 
-    .tv-middle .youtube-link span {
-        font-size: 1rem; /* Adjust text size for mobile */
+    .tv a .click-me {
+        font-size: 1rem;
     }
 }
