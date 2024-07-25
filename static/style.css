@@ -8,14 +8,14 @@ body, html {
 }
 
 .container-fluid {
-    background: url('{{ url_for("https://darsha.org/wp-content/uploads/2017/11/DarshaHewitt_ElectrostaticBellChoir_01.jpg") }}') no-repeat center center fixed;
+    background: url('https://darsha.org/wp-content/uploads/2017/11/DarshaHewitt_ElectrostaticBellChoir_01.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
 
 .tv-button {
     display: inline-block;
-    background-color: rgba(255, 0, 0, 0.7);
+    background-color: rgba(255, 0, 0, 0.8);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -23,16 +23,30 @@ body, html {
     font-family: 'Orbitron', sans-serif;
     text-decoration: none;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-    animation: flicker 2s infinite alternate;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    animation: dyingBatteries 3s infinite;
 }
 
-@keyframes flicker {
-    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-        box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.7);
+@keyframes dyingBatteries {
+    0%, 100% {
+        background-color: rgba(255, 0, 0, 0.8);
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.8);
     }
-    20%, 21.9999%, 63%, 63.999%, 65%, 69.999% {
-        box-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.7), 0 0 15px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.7);
+    30% {
+        background-color: rgba(180, 0, 0, 0.6);
+        box-shadow: 0 0 10px rgba(180, 0, 0, 0.6), 0 0 20px rgba(180, 0, 0, 0.6);
+    }
+    60% {
+        background-color: rgba(120, 0, 0, 0.4);
+        box-shadow: 0 0 5px rgba(120, 0, 0, 0.4), 0 0 10px rgba(120, 0, 0, 0.4);
+    }
+    80% {
+        background-color: rgba(50, 0, 0, 0.2);
+        box-shadow: 0 0 2px rgba(50, 0, 0, 0.2), 0 0 5px rgba(50, 0, 0, 0.2);
+    }
+    90% {
+        background-color: rgba(100, 0, 0, 0.3);
+        box-shadow: 0 0 8px rgba(100, 0, 0, 0.3), 0 0 16px rgba(100, 0, 0, 0.3);
     }
 }
 
