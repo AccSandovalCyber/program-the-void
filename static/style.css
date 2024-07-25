@@ -3,12 +3,13 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: url('/static/background.jpg') no-repeat center center fixed;
+    background: url('https://i.pinimg.com/originals/88/3d/5f/883d5ffd0257c25ca4dee2e5142a8f6e.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     position: relative;
     overflow: hidden;
 }
+
 
 .container {
     position: relative;
