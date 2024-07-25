@@ -8,15 +8,14 @@ body, html {
     align-items: center;
     justify-content: center;
     background-color: black;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .tv-container {
     position: relative;
-    width: 80%;
-    max-width: 1200px;
-    height: 80vh;
+    width: 100%;
+    height: 100vh; /* Fit the entire viewport height */
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -26,8 +25,7 @@ body, html {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url('https://darsha.org/wp-content/uploads/2017/11/DarshaHewitt_ElectrostaticBellChoir_01.jpg') no-repeat center center / cover;
-    filter: blur(10px);
+    background: url('/static/background.jpg') no-repeat center center / cover;
     z-index: 1;
 }
 
@@ -41,39 +39,46 @@ body, html {
     transition: transform 0.3s ease;
 }
 
-.tv img {
+.tv img, .tv .tv-screen {
     width: 100%;
     height: auto;
     display: block;
 }
 
 .tv-main {
-    width: 40%;
+    width: 30vw;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.tv-main:hover {
-    transform: scale(1.05);
-}
-
-.tv-ambient {
-    width: 20%;
+.tv-main .tv-screen {
+    position: relative;
 }
 
 .click-me {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 5px;
     font-size: 1.2rem;
     text-align: center;
     display: block;
-    width: 100%;
+    width: auto;
     transition: background-color 0.3s ease;
+}
+
+.tv-ambient {
+    width: 15vw;
+}
+
+.tv-ambient img {
+    opacity: 0.8; /* Slight opacity to distinguish from the main TV */
 }
 
 .click-me:hover {
