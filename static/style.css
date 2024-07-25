@@ -1,86 +1,76 @@
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Orbitron', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    overflow: hidden; /* Prevent scrolling */
-}
-
-.tv-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Fit the entire viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
     overflow: hidden;
+    height: 100vh;
 }
 
-.tv-background {
+.background-overlay {
+    background-image: url('https://i.pinimg.com/564x/8f/38/5b/8f385bccd275be145604729f6779581e.jpg');
+    background-size: cover;
+    background-position: center;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: url('/static/background.jpg') no-repeat center center / cover;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .tv {
-    position: relative;
-    z-index: 2;
+    background-color: #333;
     margin: 10px;
-    overflow: hidden;
-    border: 5px solid #fff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.tv img, .tv .tv-screen {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.tv-main {
-    width: 30vw;
-    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-.tv-main .tv-screen {
-    position: relative;
+.tv img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.click-me {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    text-align: center;
+.tv a {
+    color: white;
+    text-decoration: none;
     display: block;
-    width: auto;
-    transition: background-color 0.3s ease;
 }
 
-.tv-ambient {
-    width: 15vw;
+footer {
+    margin-top: 20px;
+    color: white;
 }
 
-.tv-ambient img {
-    opacity: 0.8; /* Slight opacity to distinguish from the main TV */
-}
-
-.click-me:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
