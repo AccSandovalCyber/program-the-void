@@ -8,7 +8,7 @@ body, html {
 }
 
 .container-fluid {
-    background: url('{{ url_for("static", filename="images/your_background_image.jpg") }}') no-repeat center center fixed;
+    background: url('{{ url_for("https://darsha.org/wp-content/uploads/2017/11/DarshaHewitt_ElectrostaticBellChoir_01.jpg") }}') no-repeat center center fixed;
     background-size: cover;
     position: relative;
 }
