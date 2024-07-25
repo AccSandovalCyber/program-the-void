@@ -1,26 +1,24 @@
-document.getElementById('doorButton').addEventListener('click', function() {
-    console.log('Door button clicked');
-    fetchRandomGif();
-});
-
 function fetchRandomGif() {
     const apiKey = 'qPKc2S2fpfff7C3cM1mdpKFTzWZZAwUT'; // Your Giphy API key
     const apiUrl = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=&rating=G`;
 
-    console.log('Fetching GIF from Giphy API...');
-    
     fetch(apiUrl)
         .then(response => {
-            console.log('Response received:', response);
-            return response.json();
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json(); // Parse the JSON from the response
         })
         .then(data => {
-            if (data && data.data && data.data.images) {
+            console.log('Data received:', data); // Log the data for inspection
+
+            // Ensure you are accessing the correct path in the data object
+            if (data && data.data && data.data.images && data.data.images.original && data.data.images.original.url) {
                 const gifUrl = data.data.images.original.url;
-                document.getElementById('giphyImage').src = gifUrl;
+                document.getElementById('giphyImage').src = gifUrl; // Update the image source
                 console.log('GIF loaded:', gifUrl);
             } else {
-                console.error('No data returned or incorrect data structure:', data);
+                console.error('Unexpected data structure:', data);
             }
         })
         .catch(error => console.error('Error fetching GIF:', error));
