@@ -1,4 +1,5 @@
 document.getElementById('doorButton').addEventListener('click', function() {
+    console.log('Door button clicked');
     fetchRandomGif();
 });
 
@@ -9,8 +10,13 @@ function fetchRandomGif() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            const gifUrl = data.data.images.original.url;
-            document.getElementById('giphyImage').src = gifUrl;
+            if (data.data && data.data.images) {
+                const gifUrl = data.data.images.original.url;
+                document.getElementById('giphyImage').src = gifUrl;
+                console.log('GIF loaded:', gifUrl);
+            } else {
+                console.error('No data returned from API');
+            }
         })
         .catch(error => console.error('Error fetching GIF:', error));
 }
