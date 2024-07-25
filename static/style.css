@@ -12,33 +12,27 @@ body, html {
     background-size: cover;
 }
 
-.tv-container {
-    position: relative;
-    padding: 10px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.giphy-embed {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: block;
-    background: #000;
-}
-
 .tv-button {
+    display: inline-block;
     background-color: rgba(255, 0, 0, 0.7);
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 20px;
+    padding: 15px 30px;
+    font-size: 24px;
     font-family: 'Press Start 2P', cursive;
     text-decoration: none;
-    text-align: center;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.7);
+    }
+    20%, 21.9999%, 63%, 63.999%, 65%, 69.999% {
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.7), 0 0 15px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.7);
+    }
 }
 
 .tv-button:hover {
@@ -49,4 +43,3 @@ body, html {
 .tv-button:focus {
     outline: none;
 }
-
